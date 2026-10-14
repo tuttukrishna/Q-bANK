@@ -1,0 +1,2820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Q-Bank | CUSAT EEE Question Papers</title>
+<meta name="description" content="Browse, preview and download CUSAT EEE internal, end-semester and supplementary question papers for the 2019, 2023 and 2025 schemes.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#fafaf8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23141414'/%3E%3Cpath d='M32 16 A 16 16 0 1 0 44 42 L 50 48' stroke='%23ffffff' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   DESIGN SYSTEM — Minimalist Editorial Monochrome
+   Clean, responsive, perfectly aligned for Mobile & Laptop
+   ===================================================================== */
+:root {
+  /* Canvas Palette */
+  --bg: #fafaf8;
+  --bg-card: #f3f3f1;
+  --bg-card-hover: #ebebea;
+  --bg-white: #ffffff;
+  
+  /* Ink Palette */
+  --ink: #141414;
+  --ink-secondary: #383838;
+  --muted: #787878;
+  --muted-light: #b0b0b0;
+  
+  /* Borders */
+  --border: #e6e6e3;
+  --border-light: #efefed;
+  --border-dark: #141414;
+  
+  /* Inverted Card */
+  --dark-card: #141414;
+  --dark-card-text: #ffffff;
+  --dark-card-sub: #a8a8a8;
+  
+  /* Status */
+  --ok: #2e7d32;
+  --danger: #d32f2f;
+  
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  
+  /* Radii */
+  --r-hero: 32px;
+  --r-xl: 28px;
+  --r-lg: 18px;
+  --r-md: 14px;
+  --r-sm: 8px;
+  --r-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 14px 34px rgba(0, 0, 0, 0.1);
+  --shadow-btn: 0 4px 14px rgba(20, 20, 20, 0.15);
+  
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =====================================================================
+   RESET & RESPONSIVE FOUNDATION
+   ===================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font: 400 15px/1.6 var(--font-body);
+  min-height: 100dvh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle corner decoration waves */
+.deco-wave {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+.deco-wave-tl { top: 16px; left: 16px; width: 64px; }
+.deco-wave-br { bottom: 24px; right: 20px; width: 78px; }
+
+h1, h2, h3, h4 {
+  line-height: 1.18;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.wrap {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 20px 140px;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .wrap { padding: 24px 32px 140px; }
+}
+
+/* =====================================================================
+   TOP HEADER
+   ===================================================================== */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0 20px;
+}
+.brand-group {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+}
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1;
+}
+.brand-sub {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* Right Header Profile Button */
+.profile-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  transition: all 0.22s var(--ease);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+.profile-btn:hover {
+  background: var(--ink);
+  color: var(--bg-white);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.profile-btn svg { width: 20px; height: 20px; stroke-width: 2.2; }
+
+/* =====================================================================
+   HERO / EDITORIAL SECTION
+   ===================================================================== */
+.hero-editorial {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+  margin: 10px 0 28px;
+}
+@media (min-width: 820px) {
+  .hero-editorial {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    margin: 16px 0 36px;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-headline {
+  margin-bottom: 14px;
+}
+.headline-light {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 5.2vw, 46px);
+  color: var(--ink-secondary);
+  line-height: 1.15;
+  display: block;
+}
+.headline-bold {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(34px, 5.8vw, 54px);
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.headline-circle {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.hero-desc {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+  margin: 4px 0 22px;
+}
+@media (min-width: 768px) {
+  .hero-desc { font-size: 16px; }
+}
+
+/* CTA Bar - Only "Get Started" */
+.hero-cta-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.btn-primary-pill {
+  background: var(--ink);
+  color: var(--bg-white);
+  padding: 13px 26px;
+  border-radius: var(--r-full);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.22s var(--ease);
+  box-shadow: var(--shadow-btn);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-primary-pill:hover {
+  background: #2b2b2b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+.btn-primary-pill svg { width: 16px; height: 16px; }
+
+/* Hero Illustration Card — College Image Framing */
+.hero-illustration-card {
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-hero);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+  transition: border-color 0.24s var(--ease), box-shadow 0.24s var(--ease);
+}
+.hero-illustration-card:hover {
+  border-color: #cfcfcc;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 820px) {
+  .hero-illustration-card { max-width: 100%; padding: 20px; }
+}
+.hero-illustration-card img {
+  width: 100%;
+  max-height: 330px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.3s var(--ease);
+}
+.hero-illustration-card:hover img {
+  transform: scale(1.02);
+}
+
+/* =====================================================================
+   SCHEME TOGGLE SECTION — Placed below main image, above Choose Semester area
+   ===================================================================== */
+.scheme-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 28px;
+  padding: 16px 20px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.25s var(--ease);
+}
+.scheme-bar-wrap:hover {
+  border-color: #cfcfcc;
+  box-shadow: var(--shadow-card);
+}
+.scheme-bar-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.scheme-segment {
+  display: inline-flex;
+  background: var(--bg-card);
+  border-radius: var(--r-full);
+  padding: 4px;
+  gap: 4px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  max-width: 100%;
+}
+.scheme-btn {
+  padding: 8px 20px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.scheme-btn:hover { color: var(--ink); }
+.scheme-btn[aria-pressed=true] {
+  background: var(--ink);
+  color: var(--bg-white);
+  box-shadow: 0 3px 10px rgba(20, 20, 20, 0.2);
+  transform: translateY(-1px);
+}
+
+/* =====================================================================
+   SEMESTER ARCHIVE CARDS (1st, 2nd, 3rd, 4th Year Studies)
+   White boxes have crisp black outline; 2nd & 4th have exact black design
+   ===================================================================== */
+.section-headline {
+  margin: 24px 0 16px;
+}
+.headline-sub {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--muted);
+  display: block;
+}
+.headline-main {
+  font-family: var(--font-body);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+@media (min-width: 768px) {
+  .headline-sub { font-size: 22px; }
+  .headline-main { font-size: 32px; }
+}
+
+/* 4 Year Category Cards Grid */
+.activity-cards-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+@media (min-width: 620px) {
+  .activity-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+}
+
+.act-card {
+  border-radius: var(--r-xl);
+  padding: 24px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-white);
+  border: 2.5px solid var(--ink);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  min-height: 136px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+.act-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+.act-card[aria-selected=true] {
+  box-shadow: 0 0 0 3px var(--ink);
+}
+
+/* Inverted Dark Card (Matching reference for 2nd and 4th Year Studies) */
+.act-card.dark {
+  background: var(--dark-card);
+  color: var(--dark-card-text);
+  border: 2.5px solid var(--dark-card);
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.22);
+}
+.act-card.dark:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.act-card.dark .act-title { color: #ffffff; }
+.act-card.dark .act-sub { color: #a8a8a8; }
+.act-card.dark .circle-arrow-btn {
+  background: var(--bg-white);
+  color: var(--ink);
+}
+
+.act-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding-right: 12px;
+  z-index: 1;
+}
+.act-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.act-sub {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.circle-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg-white);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s;
+  flex-shrink: 0;
+}
+.act-card:hover .circle-arrow-btn {
+  transform: translateX(5px);
+}
+.circle-arrow-btn svg { width: 18px; height: 18px; }
+
+.act-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.act-card:hover .act-img {
+  transform: scale(1.05);
+}
+.act-card.dark .act-img {
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.18));
+  mix-blend-mode: normal;
+}
+
+/* =====================================================================
+   DRILLDOWN WINDOWS & BREADCRUMBS
+   ===================================================================== */
+.drilldown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.drilldown-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.btn-back-pill {
+  background: var(--bg-card);
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+  padding: 8px 16px;
+  border-radius: var(--r-full);
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.22s var(--ease);
+}
+.btn-back-pill:hover {
+  background: var(--ink);
+  color: var(--bg-white);
+  border-color: var(--ink);
+  transform: translateX(-2px);
+}
+.btn-back-pill svg { width: 15px; height: 15px; }
+
+.drill-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.drill-breadcrumbs .crumb-sep { opacity: 0.5; }
+.drill-breadcrumbs .crumb-active { color: var(--ink); font-weight: 800; }
+
+/* =====================================================================
+   SPECIFIC HEADER SECTION (In Papers View)
+   ===================================================================== */
+.specific-header-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.search-box-row {
+  display: grid;
+  gap: 12px;
+}
+.search-field {
+  position: relative;
+}
+.search-field input {
+  width: 100%;
+  padding: 13px 18px 13px 46px;
+  border-radius: var(--r-lg);
+  border: 1.5px solid var(--border);
+  background: var(--bg-white);
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s var(--ease);
+}
+.search-field input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.08);
+}
+.search-field svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px; height: 18px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.chips-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px;
+  -webkit-overflow-scrolling: touch;
+}
+.chips-scroll::-webkit-scrollbar { display: none; }
+
+.filter-chip {
+  padding: 8px 18px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--bg-card);
+  color: var(--ink-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.filter-chip:hover {
+  background: #ebebea;
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.filter-chip[aria-pressed=true] {
+  background: var(--ink);
+  color: var(--bg-white);
+  border-color: var(--ink);
+  box-shadow: 0 2px 10px rgba(20, 20, 20, 0.2);
+  transform: translateY(-1px);
+}
+
+.status-counter {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* =====================================================================
+   FOLDER BOX & PAPERS LIST
+   ===================================================================== */
+.folders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.folder-box {
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.folder-box.open {
+  border-color: #cfcfcc;
+  box-shadow: var(--shadow-card);
+}
+.folder-head {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  background: transparent;
+  gap: 14px;
+}
+.folder-head:hover {
+  background: var(--bg-card);
+}
+.folder-head-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+.folder-head-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.folder-head-info small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.code-tag {
+  background: var(--bg-card);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: var(--r-sm);
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.folder-head svg {
+  width: 20px; height: 20px;
+  color: var(--muted);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.folder-box.open .folder-head svg {
+  transform: rotate(180deg);
+}
+
+.papers-container {
+  display: none;
+  padding: 6px 16px 16px;
+  border-top: 1px solid var(--border-light);
+  background: #fdfdfc;
+  flex-direction: column;
+  gap: 10px;
+}
+.folder-box.open .papers-container {
+  display: flex;
+}
+
+.paper-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  flex-wrap: wrap;
+  transition: all 0.2s var(--ease);
+}
+.paper-item:hover {
+  border-color: #cfcfcc;
+  box-shadow: var(--shadow-sm);
+}
+.paper-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.paper-meta strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+.paper-meta .sm {
+  font-size: 12px;
+  color: var(--muted);
+}
+.exam-tag {
+  background: var(--ink);
+  color: var(--bg-white);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--r-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.paper-buttons {
+  display: flex;
+  gap: 8px;
+}
+.btn-action {
+  padding: 7px 14px;
+  border-radius: var(--r-full);
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--bg-card);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s var(--ease);
+}
+.btn-action:hover {
+  background: #ebebea;
+  transform: translateY(-1px);
+}
+.btn-action.primary {
+  background: var(--ink);
+  color: var(--bg-white);
+  border-color: var(--ink);
+}
+.btn-action.primary:hover {
+  background: #2b2b2b;
+}
+.btn-action svg { width: 14px; height: 14px; }
+
+.empty-box {
+  text-align: center;
+  padding: 44px 20px;
+  background: var(--bg-white);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--r-xl);
+}
+.empty-box h3 { font-size: 18px; margin-bottom: 6px; }
+.empty-box p { font-size: 14px; color: var(--muted); max-width: 44ch; margin: 0 auto 16px; }
+
+/* =====================================================================
+   APP FOOTER DESIGN (Requested)
+   ===================================================================== */
+.app-footer {
+  text-align: center;
+  padding: 38px 16px 20px;
+  color: var(--muted);
+  font-size: 13.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  user-select: none;
+}
+.footer-love {
+  font-weight: 600;
+  color: var(--ink-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.footer-heart {
+  color: #e53935;
+  display: inline-block;
+  font-size: 15px;
+  animation: heartPulse 1.6s ease infinite;
+}
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
+.footer-copy {
+  font-size: 11.5px;
+  color: var(--muted-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* =====================================================================
+   FLOATING BOTTOM NAVIGATION & SMOOTH TRANSITIONS
+   ===================================================================== */
+.floating-nav-wrapper {
+  position: fixed;
+  left: 0; right: 0; bottom: 18px;
+  display: flex;
+  justify-content: center;
+  z-index: 50;
+  pointer-events: none;
+  padding: 0 16px;
+}
+.floating-nav {
+  pointer-events: auto;
+  background: var(--ink);
+  color: var(--bg-white);
+  border-radius: var(--r-full);
+  padding: 5px;
+  display: flex;
+  gap: 4px;
+  box-shadow: var(--shadow-float);
+}
+.floating-nav button {
+  padding: 9px 18px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 700;
+  color: #a0a0a0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.floating-nav button svg { width: 15px; height: 15px; }
+.floating-nav button:hover { color: var(--bg-white); }
+.floating-nav button[aria-current=page] {
+  background: var(--bg-white);
+  color: var(--ink);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Smooth View Transitions */
+@keyframes viewFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes stepSlideIn {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes stepSlideBack {
+  from { opacity: 0; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.anim-step-in { animation: stepSlideIn 0.28s var(--ease) forwards; }
+.anim-step-back { animation: stepSlideBack 0.28s var(--ease) forwards; }
+.anim-fade-in { animation: viewFadeIn 0.28s var(--ease) forwards; }
+
+#v-browse, #v-offline, #v-request {
+  animation: viewFadeIn 0.28s var(--ease) forwards;
+}
+
+/* =====================================================================
+   PANELS & FORMS (Offline & Requests)
+   ===================================================================== */
+.panel-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 26px 20px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) { .panel-card { padding: 32px 28px; } }
+
+.form-grid { display: grid; gap: 14px; }
+.grid-2 { display: grid; gap: 12px; }
+.grid-3 { display: grid; gap: 12px; }
+.grid-4 { display: grid; gap: 12px; }
+@media (min-width: 600px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+}
+.field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.field-label input, .field-label select, .field-label textarea, .admin-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border);
+  background: var(--bg-white);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.field-label input:focus, .field-label select:focus, .field-label textarea:focus, .admin-input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgba(20, 20, 20, 0.08);
+}
+.field-label textarea { resize: vertical; min-height: 80px; }
+.err-msg { font-size: 13px; color: var(--danger); font-weight: 600; min-height: 18px; }
+
+/* =====================================================================
+   ADMIN PORTAL
+   ===================================================================== */
+.admin-login-frame {
+  max-width: 440px;
+  margin: 40px auto;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-hero);
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-float);
+}
+.admin-login-frame img {
+  width: 76px; height: 76px;
+  margin: 0 auto 16px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.admin-login-frame h2 {
+  font-family: var(--font-display);
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 22px 0 16px;
+}
+.admin-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 22px;
+}
+.admin-tabs button {
+  padding: 8px 16px;
+  border-radius: var(--r-full);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--muted);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.admin-tabs button:hover { color: var(--ink); }
+.admin-tabs button[aria-selected=true] {
+  background: var(--ink);
+  color: var(--bg-white);
+  box-shadow: 0 2px 8px rgba(20,20,20,0.18);
+}
+
+.admin-stats-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 22px;
+}
+@media (min-width: 768px) { .admin-stats-grid { grid-template-columns: repeat(4, 1fr); } }
+.admin-stat-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 18px;
+}
+.admin-stat-card b {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ink);
+  display: block;
+  line-height: 1;
+}
+.admin-stat-card span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 6px;
+  display: block;
+}
+
+.admin-paper-row {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.admin-paper-row.unpub { opacity: 0.65; border-style: dashed; }
+
+.admin-filter-bar {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) { .admin-filter-bar { grid-template-columns: 2fr 1.2fr 1fr 1fr 1fr 1fr; } }
+.admin-filter-bar .admin-input:first-child { grid-column: 1/-1; }
+@media (min-width: 768px) { .admin-filter-bar .admin-input:first-child { grid-column: auto; } }
+
+.drop-zone {
+  border: 2px dashed var(--border-dark);
+  border-radius: var(--r-xl);
+  padding: 36px 20px;
+  text-align: center;
+  background: var(--bg-white);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 16px;
+}
+.drop-zone:hover { background: var(--bg-card); }
+.drop-zone.over { border-color: var(--ink); background: #f0f0ee; }
+.drop-zone img { width: 80px; height: 80px; margin: 0 auto 10px; object-fit: contain; mix-blend-mode: multiply; }
+.drop-zone strong { font-size: 17px; font-weight: 800; display: block; margin-bottom: 4px; }
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 100;
+  overflow-y: auto;
+}
+.modal-sheet {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-hero);
+  padding: 28px 22px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow-float);
+  position: relative;
+}
+.modal-sheet.preview-modal {
+  max-width: 900px;
+  width: 95vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Spinner */
+.spin {
+  width: 16px; height: 16px;
+  border: 2px solid var(--border);
+  border-top-color: var(--ink);
+  border-radius: 50%;
+  animation: sp 0.7s linear infinite;
+  display: inline-block;
+}
+@keyframes sp { to { transform: rotate(360deg); } }
+
+/* Toast */
+#toasts {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 120;
+  pointer-events: none;
+}
+.toast {
+  background: var(--ink);
+  color: var(--bg-white);
+  padding: 10px 20px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.toast.bad { background: var(--danger); }
+</style>
+</head>
+<body>
+
+<!-- Subtle Corner Decorations -->
+<svg class="deco-wave deco-wave-tl" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M0 10 Q25 0 50 10 T100 10"/>
+  <path d="M0 25 Q25 15 50 25 T100 25"/>
+</svg>
+<svg class="deco-wave deco-wave-br" viewBox="0 0 100 40" fill="none" stroke="currentColor" stroke-width="2">
+  <path d="M0 15 Q25 5 50 15 T100 15"/>
+  <path d="M0 30 Q25 20 50 30 T100 30"/>
+</svg>
+
+<div id="app"></div>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+'use strict';
+/* =====================================================================
+   SUPABASE CONFIGURATION
+   ===================================================================== */
+const SUPABASE_URL = 'https://pbgiuuacirzzvgxumutl.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBiZ2l1dWFjaXJ6enZneHVtdXRsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5ODMyMDQsImV4cCI6MjEwNzU1OTIwNH0.CSxwRSk24khucm0fqPbYFT2hsT_h3t-O9T_6-vyzPI8';
+const BUCKET = 'papers';
+const ADMIN_DOMAIN = 'qbank.app';
+const IDLE_MS = 30 * 60 * 1000;
+const MAX_PDF = 25 * 1024 * 1024;
+
+const sb = (window.supabase && window.supabase.createClient)
+  ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+/* ---------- Demo Fallback Data ---------- */
+const DEMO_DATA = [
+  {id:'demo-1',title:'Basic Electrical Engineering - Series 1 2024',subject_name:'Basic Electrical Engineering',subject_code:'EE101',scheme:2023,semester:1,exam_type:'series1',exam_year:2024,file_size:1048576,download_count:24,demo:true},
+  {id:'demo-2',title:'Basic Electrical Engineering - End Sem 2024',subject_name:'Basic Electrical Engineering',subject_code:'EE101',scheme:2023,semester:1,exam_type:'endsem',exam_year:2024,file_size:1572864,download_count:35,demo:true},
+  {id:'demo-3',title:'Engineering Mathematics I - Series 2 2024',subject_name:'Engineering Mathematics I',subject_code:'MA101',scheme:2023,semester:1,exam_type:'series2',exam_year:2024,file_size:1200000,download_count:18,demo:true},
+  {id:'demo-4',title:'Engineering Physics - End Semester 2024',subject_name:'Engineering Physics',subject_code:'PH101',scheme:2023,semester:1,exam_type:'endsem',exam_year:2024,file_size:1800000,download_count:29,demo:true},
+  {id:'demo-5',title:'Basic Electronics - End Sem 2024',subject_name:'Basic Electronics',subject_code:'EC102',scheme:2023,semester:2,exam_type:'endsem',exam_year:2024,file_size:1400000,download_count:15,demo:true},
+  {id:'demo-6',title:'Circuit Theory - End Semester 2023',subject_name:'Circuit Theory',subject_code:'EE201',scheme:2019,semester:3,exam_type:'endsem',exam_year:2023,file_size:2097152,download_count:42,demo:true},
+  {id:'demo-7',title:'Electrical Machines I - Series 1 2023',subject_name:'Electrical Machines I',subject_code:'EE203',scheme:2019,semester:3,exam_type:'series1',exam_year:2023,file_size:1600000,download_count:21,demo:true},
+  {id:'demo-8',title:'Engineering Mathematics I - End Sem 2022',subject_name:'Engineering Mathematics I',subject_code:'MA101',scheme:2019,semester:1,exam_type:'endsem',exam_year:2022,file_size:1700000,download_count:38,demo:true},
+  {id:'demo-9',title:'Power Systems I - Series 1 2024',subject_name:'Power Systems I',subject_code:'EE301',scheme:2023,semester:5,exam_type:'series1',exam_year:2024,file_size:1500000,download_count:19,demo:true},
+  {id:'demo-10',title:'Power Electronics - End Sem 2024',subject_name:'Power Electronics',subject_code:'EE401',scheme:2023,semester:7,exam_type:'endsem',exam_year:2024,file_size:2200000,download_count:31,demo:true},
+  {id:'demo-11',title:'Basic Electrical Engineering - NEP Model 2025',subject_name:'Basic Electrical Engineering',subject_code:'EE101',scheme:2025,semester:1,exam_type:'series1',exam_year:2025,file_size:980000,download_count:8,demo:true}
+];
+
+/* ---------- Helpers & State ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const EXAMS = {
+  series1: {label:'Series 1'},
+  series2: {label:'Series 2'},
+  endsem: {label:'End Semester'},
+  supplementary: {label:'Supplementary'}
+};
+const EXAM_ORDER = ['series1','series2','endsem','supplementary'];
+const SCHEMES = [2019, 2023, 2025];
+const YEAR_NAMES = ['First Year Studies', 'Second Year Studies', 'Third Year Studies', 'Fourth Year Studies'];
+const SEMESTER_WORDS = {1:'ONE', 2:'TWO', 3:'THREE', 4:'FOUR', 5:'FIVE', 6:'SIX', 7:'SEVEN', 8:'EIGHT'};
+
+const fmtSize = b => !b ? '' : b > 1048576 ? (b/1048576).toFixed(1)+' MB' : Math.max(1,Math.round(b/1024))+' KB';
+const fmtDate = d => d ? new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '';
+const ls = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch{ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
+};
+const fileUrl = p => `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${String(p).split('/').map(encodeURIComponent).join('/')}`;
+const fileName = p => {
+  if(p && p.file_path){
+    const parts = String(p.file_path).split('/');
+    const last = parts[parts.length - 1];
+    const clean = last.replace(/^\d+_/, '');
+    if(clean.toLowerCase().endsWith('.pdf')) return clean;
+  }
+  return `${p.subject_code}_${p.exam_type}_${p.exam_year}.pdf`.replace(/[^\w.-]+/g,'_');
+};
+
+/* ---- SVG Icons ---- */
+const ICON = {
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  chev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
+  arrowRight: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+  arrowLeft: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+  folder: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>',
+  dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0-5-5m5 5 5-5"/><path d="M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2"/></svg>',
+  eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 010-.696 10.75 10.75 0 0119.876 0 1 1 0 010 .696 10.75 10.75 0 01-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>',
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 00-1-1h-4a1 1 0 00-1 1v8"/><path d="M3 10a2 2 0 01.709-1.528l7-5.999a2 2 0 012.582 0l7 5.999A2 2 0 0121 10v9a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>',
+  save: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>',
+  plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>',
+  close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>',
+  lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+  user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+  upload: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>',
+  settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>',
+  logout: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>',
+  file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>',
+  ext: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>'
+};
+
+function toast(msg, bad){
+  const el = document.createElement('div');
+  el.className = 'toast' + (bad ? ' bad' : '');
+  el.textContent = msg;
+  $('#toasts').appendChild(el);
+  setTimeout(() => el.remove(), 3200);
+}
+
+function openOverlay(html, cls=''){
+  closeOverlay();
+  const ov = document.createElement('div');
+  ov.className = 'modal-overlay';
+  ov.id = 'activeOverlay';
+  ov.innerHTML = `<div class="modal-sheet ${cls}">${html}</div>`;
+  ov.onclick = e => { if(e.target === ov) closeOverlay(); };
+  document.body.appendChild(ov);
+  return ov;
+}
+function closeOverlay(){
+  const o = $('#activeOverlay');
+  if(o) o.remove();
+}
+
+/* ---------- IndexedDB Cache for Offline PDFs ---------- */
+const idb = {
+  db: null,
+  async getDb(){
+    if(this.db) return this.db;
+    return new Promise((res, rej) => {
+      const r = indexedDB.open('qbank_offline', 1);
+      r.onupgradeneeded = e => {
+        const d = e.target.result;
+        if(!d.objectStoreNames.contains('files')) d.createObjectStore('files', {keyPath:'id'});
+      };
+      r.onsuccess = () => { this.db = r.result; res(this.db); };
+      r.onerror = () => rej(r.error);
+    });
+  },
+  async get(id){
+    const d = await this.getDb();
+    return new Promise((res, rej) => {
+      const tx = d.transaction('files','readonly').objectStore('files').get(String(id));
+      tx.onsuccess = () => res(tx.result);
+      tx.onerror = () => rej(tx.error);
+    });
+  },
+  async set(id, blob, meta){
+    const d = await this.getDb();
+    return new Promise((res, rej) => {
+      const tx = d.transaction('files','readwrite');
+      tx.objectStore('files').put({id:String(id), blob, meta, saved_at:Date.now()});
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  },
+  async del(id){
+    const d = await this.getDb();
+    return new Promise((res, rej) => {
+      const tx = d.transaction('files','readwrite');
+      tx.objectStore('files').delete(String(id));
+      tx.oncomplete = () => res();
+      tx.onerror = () => rej(tx.error);
+    });
+  }
+};
+const offlineMeta = () => ls.get('qbank.saved_meta', {});
+const setOfflineMeta = m => ls.set('qbank.saved_meta', m);
+
+/* ---------- Router ---------- */
+let idleTimer = null, idleCheck = null;
+function route(){
+  clearInterval(idleCheck); idleCheck = null;
+  closeOverlay();
+  if(location.hash === '#admin' || location.hash === '#/admin') mountAdmin(); else mountStudent();
+}
+window.addEventListener('hashchange', route);
+
+/* ---------- Verification State Management (Persistent Local + Supabase Sync) ---------- */
+function enrichWithVerification(papers){
+  if(!Array.isArray(papers)) return;
+  const vm = ls.get('qbank.verified_papers', {});
+  papers.forEach(p => {
+    if(p.is_verified === undefined || p.is_verified === null){
+      if(vm[p.id] !== undefined) {
+        p.is_verified = vm[p.id].ok;
+        p.verified_at = vm[p.id].at;
+      }
+    } else {
+      vm[p.id] = {ok: !!p.is_verified, at: Date.now()};
+    }
+  });
+  ls.set('qbank.verified_papers', vm);
+}
+
+async function markPaperVerified(p, ok){
+  if(!p) return;
+  p.is_verified = ok;
+  p.verified_at = Date.now();
+
+  // 1. Persist to localStorage map
+  const vm = ls.get('qbank.verified_papers', {});
+  vm[p.id] = {ok, at: Date.now()};
+  ls.set('qbank.verified_papers', vm);
+
+  // 2. Synchronize to active student catalog if present
+  if(Array.isArray(S.papers)){
+    const sp = S.papers.find(x => String(x.id) === String(p.id));
+    if(sp){
+      sp.is_verified = ok;
+      sp.verified_at = Date.now();
+    }
+    ls.set('qbank.catalog', S.papers);
+  }
+
+  // 3. Update Supabase backend if column exists
+  if(sb && !p.demo){
+    try {
+      await sb.from('papers').update({is_verified: ok}).eq('id', p.id);
+    } catch(err){
+      // Column may not exist in database yet, local persistent fallback is active
+    }
+  }
+}
+
+/* =====================================================================
+   STUDENT STATE & DRILLDOWN ENGINE
+   ===================================================================== */
+const S = {
+  papers: [], source: 'live',
+  prefs: ls.get('qbank.prefs', null) || {scheme: 2023, sem: 1, year: 1},
+  drill: {
+    step: 'landing', // 'landing' | 'sem_select' | 'papers'
+    year: 1,
+    scheme: 2023,
+    sem: 1,
+    dir: 'next'
+  },
+  exam: 'all', query: '', open: new Set(), loading: true
+};
+
+async function loadCatalog(){
+  S.loading = true;
+  try{
+    if(!sb) throw new Error('Supabase unavailable');
+    const out = []; let from = 0;
+    for(;;){
+      const {data, error} = await sb.from('papers')
+        .select('id,title,subject_name,subject_code,scheme,semester,exam_type,exam_year,exam_month,file_path,file_size,download_count,created_at')
+        .eq('is_published', true).order('exam_year',{ascending:false}).range(from, from+999);
+      if(error) throw error;
+      out.push(...data);
+      if(data.length < 1000) break;
+      from += 1000;
+    }
+    S.papers = out; S.source = 'live';
+    enrichWithVerification(S.papers);
+    ls.set('qbank.catalog', out);
+  }catch(e){
+    const cached = ls.get('qbank.catalog', null);
+    if(cached && cached.length){ S.papers = cached; S.source = 'cached'; enrichWithVerification(S.papers); }
+    else { S.papers = DEMO_DATA; S.source = 'demo'; enrichWithVerification(S.papers); }
+  }
+  S.loading = false;
+}
+
+function mountStudent(){
+  document.title = 'Q-Bank | CUSAT EEE Question Papers';
+  $('meta[name=robots]').content = 'index,follow';
+  $('#app').innerHTML = `
+  <div class="wrap">
+    <!-- TOP HEADER -->
+    <header class="header-top">
+      <div class="brand-group" id="headerBrandLogo">
+        <div class="brand-title">Q-Bank</div>
+        <div class="brand-sub">CUSAT EEE</div>
+      </div>
+      <!-- SINGLE PROFILE BUTTON FOR LOGIN -->
+      <a href="#admin" class="profile-btn" aria-label="Admin Profile" title="Admin Profile">
+        ${ICON.user}
+      </a>
+    </header>
+
+    <main>
+      <!-- BROWSE MAIN VIEW -->
+      <section id="v-browse">
+        <!-- 1. LANDING PAGE VIEW -->
+        <div id="browseLanding" class="anim-fade-in">
+          <!-- HERO / EDITORIAL SECTION -->
+          <div class="hero-editorial">
+            <div class="hero-text">
+              <div class="editorial-headline">
+                <span class="headline-light">Ace your semester</span>
+                <span class="headline-bold">
+                  Exams &amp; Tests <span class="headline-circle"></span>
+                </span>
+              </div>
+              <p class="hero-desc">
+                Curated archive of series tests, end-semester, and supplementary question papers for CUSAT Electrical &amp; Electronics Engineering.
+              </p>
+              <!-- CTA Bar: Get Started Scrolls to Scheme Section -->
+              <div class="hero-cta-bar">
+                <button type="button" class="btn-primary-pill" id="heroExploreBtn">
+                  Get Started ${ICON.arrowRight}
+                </button>
+              </div>
+            </div>
+
+            <!-- Hero Illustration Card: College Image -->
+            <div class="hero-illustration-card">
+              <img src="assets/college_hero.jpg" alt="CUSAT Campus Architecture" onerror="this.src='assets/hero_bike.jpg'">
+            </div>
+          </div>
+
+          <!-- SCHEME TOGGLE SECTION: Placed below main image, above Choose Year area -->
+          <div class="section-headline" id="schemeSectionAnchor">
+            <span class="headline-sub">Step 1 &bull; Choose Syllabus</span>
+            <span class="headline-main">Choose Scheme</span>
+          </div>
+
+          <div class="scheme-bar-wrap">
+            <div class="scheme-segment" role="group" aria-label="Syllabus scheme" id="schemeSeg">
+              ${SCHEMES.map(s => `<button type="button" class="scheme-btn" data-scheme="${s}" aria-pressed="${s===S.prefs.scheme}">${s} Scheme</button>`).join('')}
+            </div>
+          </div>
+
+          <!-- SEMESTER ARCHIVE: 1st, 2nd, 3rd, 4th Year Studies Cards -->
+          <div class="section-headline" id="yearSectionAnchor">
+            <span class="headline-sub">Step 2 &bull; Choose Year</span>
+            <span class="headline-main">Choose Academic Year</span>
+          </div>
+
+          <div class="activity-cards-grid" id="yearCardsGrid">
+            <!-- First Year Studies (White card with black outline) -->
+            <div class="act-card" data-year="1" role="button" tabindex="0">
+              <div class="act-info">
+                <div class="act-title">First Year Studies</div>
+                <div class="act-sub">Semester 1 &amp; 2 Archive</div>
+                <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+              </div>
+              <img class="act-img" src="assets/student_binoculars.png" alt="First Year Studies Explorer" onerror="this.src='assets/explorer.jpg'">
+            </div>
+
+            <!-- Second Year Studies (Dark black box design) -->
+            <div class="act-card dark" data-year="2" role="button" tabindex="0">
+              <div class="act-info">
+                <div class="act-title">Second Year Studies</div>
+                <div class="act-sub">Semester 3 &amp; 4 Archive</div>
+                <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+              </div>
+              <img class="act-img" src="assets/laptop_study.jpg" alt="Second Year Studies Laptop" onerror="this.style.display='none'">
+            </div>
+
+            <!-- Third Year Studies (White card with black outline) -->
+            <div class="act-card" data-year="3" role="button" tabindex="0">
+              <div class="act-info">
+                <div class="act-title">Third Year Studies</div>
+                <div class="act-sub">Semester 5 &amp; 6 Archive</div>
+                <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+              </div>
+              <img class="act-img" src="assets/explorer.jpg" alt="Third Year Studies" onerror="this.style.display='none'">
+            </div>
+
+            <!-- Fourth Year Studies (Exact dark black design of second year) -->
+            <div class="act-card dark" data-year="4" role="button" tabindex="0">
+              <div class="act-info">
+                <div class="act-title">Fourth Year Studies</div>
+                <div class="act-sub">Semester 7 &amp; 8 Archive</div>
+                <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+              </div>
+              <img class="act-img" src="assets/scholar.svg" alt="Fourth Year Studies Scholar" onerror="this.src='assets/laptop_study.jpg'">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DRILLDOWN MULTI-LEVEL WINDOW (Rendered dynamically) -->
+        <div id="browseDrill" class="drilldown-container" style="display:none"></div>
+      </section>
+
+      <!-- OFFLINE SAVED PAPERS VIEW -->
+      <section id="v-offline" hidden>
+        <div class="section-headline">
+          <span class="headline-sub">Saved Archive</span>
+          <span class="headline-main">Offline Question Papers</span>
+        </div>
+        <p class="hero-desc" id="offNote">Downloaded question papers are kept here for access without internet.</p>
+        <div class="panel-card" id="olist"></div>
+      </section>
+
+      <!-- REQUEST MISSING PAPER VIEW -->
+      <section id="v-request" hidden>
+        <div class="section-headline">
+          <span class="headline-sub">Cannot Find What You Need?</span>
+          <span class="headline-main">Request a Question Paper</span>
+        </div>
+        <p class="hero-desc">Submit details of the missing question paper. The department administrators will search and upload it.</p>
+        <div class="panel-card">${requestForm()}</div>
+      </section>
+    </main>
+
+    <!-- FOOTER DESIGN (Requested) -->
+    <footer class="app-footer">
+      <div class="footer-love">Made with <span class="footer-heart">❤️</span> in CUCEK.</div>
+      <div class="footer-copy">All &copy; reserved</div>
+    </footer>
+  </div>
+
+  <!-- FLOATING MINIMALIST BOTTOM NAVIGATION -->
+  <div class="floating-nav-wrapper">
+    <nav class="floating-nav" aria-label="Main Navigation">
+      <button data-view="browse" aria-current="page">${ICON.home} Browse</button>
+      <button data-view="offline">${ICON.save} Saved</button>
+      <button data-view="request">${ICON.plus} Request</button>
+    </nav>
+  </div>`;
+
+  bindStudent();
+  renderDrillState();
+  loadCatalog().then(() => {
+    if(S.drill.step === 'papers') renderDrillPapersView();
+    renderOffline();
+  });
+}
+
+function requestForm(){
+  return `<form class="form-grid" id="reqForm" novalidate>
+    <div class="grid-2">
+      <label class="field-label">Subject Name<input name="subject_name" required maxlength="150" placeholder="e.g. Electrical Machines I"></label>
+      <label class="field-label">Subject Code (optional)<input name="subject_code" maxlength="20" placeholder="e.g. EE203"></label>
+    </div>
+    <div class="grid-3">
+      <label class="field-label">Scheme<select name="scheme" id="reqScheme">${SCHEMES.map(s => `<option ${s===S.prefs.scheme?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Semester<select name="semester" id="reqSem">${[1,2,3,4,5,6,7,8].map(s => `<option ${s===(S.drill.sem||1)?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Exam Type<select name="exam_type">${EXAM_ORDER.map(k => `<option value="${k}">${EXAMS[k].label}</option>`).join('')}</select></label>
+    </div>
+    <label class="field-label">Exam Year (optional)<input name="exam_year" type="number" min="2015" max="2100" placeholder="e.g. 2024"></label>
+    <label class="field-label">Additional Notes<textarea name="note" maxlength="500" placeholder="Exam month, syllabus module or specific test paper requested"></textarea></label>
+    <input style="display:none" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="err-msg" id="reqErr" role="alert"></div>
+    <div><button class="btn-primary-pill" type="submit" id="reqBtn">${ICON.upload} Submit Request</button></div>
+  </form>`;
+}
+
+/* =====================================================================
+   DRILLDOWN ENGINE: Home (Scheme + Year) -> Semester Choice -> Papers
+   ===================================================================== */
+function openDrillYear(year){
+  S.drill.year = year;
+  S.drill.scheme = S.prefs.scheme || 2023;
+  S.prefs.year = year;
+  ls.set('qbank.prefs', S.prefs);
+  S.drill.step = 'sem_select';
+  S.drill.dir = 'next';
+  renderDrillState();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function openDrillSem(sem){
+  S.drill.sem = sem;
+  S.prefs.sem = sem;
+  ls.set('qbank.prefs', S.prefs);
+  S.drill.step = 'papers';
+  S.drill.dir = 'next';
+  renderDrillState();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function drillBack(){
+  S.drill.dir = 'prev';
+  if(S.drill.step === 'papers'){
+    S.drill.step = 'sem_select';
+  } else if(S.drill.step === 'sem_select'){
+    S.drill.step = 'landing';
+  }
+  renderDrillState();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function resetToLanding(){
+  S.drill = { step: 'landing', scheme: S.prefs.scheme || 2023, year: 1, sem: 1, dir: 'prev' };
+  renderDrillState();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function renderDrillState(){
+  const landing = $('#browseLanding');
+  const drill = $('#browseDrill');
+  if(!landing || !drill) return;
+
+  if(S.drill.step === 'landing'){
+    drill.style.display = 'none';
+    landing.style.display = 'block';
+    landing.className = 'anim-fade-in';
+    return;
+  }
+
+  landing.style.display = 'none';
+  drill.style.display = 'flex';
+  const animClass = S.drill.dir === 'next' ? 'anim-step-in' : 'anim-step-back';
+  drill.className = `drilldown-container ${animClass}`;
+
+  if(S.drill.step === 'sem_select'){
+    renderDrillSemSelect();
+  } else if(S.drill.step === 'papers'){
+    renderDrillPapersView();
+  }
+}
+
+/* Step: Semester Selection Window (e.g. Semester ONE or Semester TWO) */
+function renderDrillSemSelect(){
+  const yr = S.drill.year || 1;
+  const scheme = S.drill.scheme || S.prefs.scheme || 2023;
+  const yrTitle = YEAR_NAMES[yr - 1];
+  const sA = (yr - 1) * 2 + 1;
+  const sB = sA + 1;
+  const drill = $('#browseDrill');
+  if(!drill) return;
+
+  drill.innerHTML = `
+    <div class="drilldown-nav-bar">
+      <button type="button" class="btn-back-pill" id="drillBack">
+        ${ICON.arrowLeft} Back to Home
+      </button>
+      <div class="drill-breadcrumbs">
+        <span>${scheme} Scheme</span>
+        <span class="crumb-sep">&gt;</span>
+        <span>${yrTitle}</span>
+        <span class="crumb-sep">&gt;</span>
+        <span class="crumb-active">Choose Semester</span>
+      </div>
+    </div>
+
+    <div class="section-headline">
+      <span class="headline-sub">${scheme} Scheme &bull; ${yrTitle}</span>
+      <span class="headline-main">Choose Semester</span>
+    </div>
+    <p class="hero-desc" style="margin-top:-6px;margin-bottom:20px">
+      Select your semester archive to browse all available subjects and question papers.
+    </p>
+
+    <div class="activity-cards-grid" id="semCardsGrid">
+      <!-- Semester A Folder (White card with black outline like reference) -->
+      <div class="act-card" data-sem-card="${sA}" role="button" tabindex="0">
+        <div class="act-info">
+          <div class="act-title">Semester ${SEMESTER_WORDS[sA] || sA}</div>
+          <div class="act-sub">Semester ${sA} Papers Archive</div>
+          <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+        </div>
+        <img class="act-img" src="assets/student_binoculars.png" alt="Semester ${sA}" onerror="this.src='assets/explorer.jpg'">
+      </div>
+
+      <!-- Semester B Folder (Dark design matching reference) -->
+      <div class="act-card dark" data-sem-card="${sB}" role="button" tabindex="0">
+        <div class="act-info">
+          <div class="act-title">Semester ${SEMESTER_WORDS[sB] || sB}</div>
+          <div class="act-sub">Semester ${sB} Papers Archive</div>
+          <div class="circle-arrow-btn">${ICON.arrowRight}</div>
+        </div>
+        <img class="act-img" src="assets/laptop_study.jpg" alt="Semester ${sB}" onerror="this.style.display='none'">
+      </div>
+    </div>
+  `;
+
+  $('#drillBack').addEventListener('click', drillBack);
+  $('#semCardsGrid').addEventListener('click', e => {
+    const card = e.target.closest('[data-sem-card]');
+    if(card) openDrillSem(+card.dataset.semCard);
+  });
+}
+
+/* Step: Papers Window with the Specific Header Section at Top */
+function renderDrillPapersView(){
+  const yr = S.drill.year || 1;
+  const scheme = S.drill.scheme || S.prefs.scheme || 2023;
+  const sem = S.drill.sem || 1;
+  const yrTitle = YEAR_NAMES[yr - 1];
+  const drill = $('#browseDrill');
+  if(!drill) return;
+
+  drill.innerHTML = `
+    <div class="drilldown-nav-bar">
+      <button type="button" class="btn-back-pill" id="drillBack">
+        ${ICON.arrowLeft} Back to Semesters
+      </button>
+      <div class="drill-breadcrumbs">
+        <span>${scheme} Scheme</span>
+        <span class="crumb-sep">&gt;</span>
+        <span>${yrTitle}</span>
+        <span class="crumb-sep">&gt;</span>
+        <span class="crumb-active">Semester ${sem}</span>
+      </div>
+    </div>
+
+    <!-- SPECIFIC HEADER SECTION (Placed cleanly at the top) -->
+    <div class="specific-header-section">
+      <div class="section-headline">
+        <span class="headline-sub">${scheme} Scheme &bull; ${yrTitle}</span>
+        <span class="headline-main">Semester ${sem} Question Papers</span>
+      </div>
+
+      <div class="search-box-row">
+        <div class="search-field">
+          ${ICON.search}
+          <label class="sr" for="q">Search question papers</label>
+          <input id="q" type="search" placeholder="Search subject code (e.g. EE201), title, or year..." value="${esc(S.query)}" autocomplete="off">
+        </div>
+
+        <!-- ONLY Paper Type / Exam Filter Chips (NO semester chooser as requested) -->
+        <div class="chips-scroll" id="chips" role="group" aria-label="Exam type filter">
+          ${[['all','All Papers'], ...EXAM_ORDER.map(k => [k, EXAMS[k].label])].map(([k,l]) => `
+            <button type="button" class="filter-chip" data-exam="${k}" aria-pressed="${S.exam===k}">${l}</button>
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="status-counter" id="status" role="status"></div>
+    </div>
+
+    <!-- Alphabetically Sorted Subject Folders List -->
+    <div class="folders-list" id="folders"></div>
+  `;
+
+  $('#drillBack').addEventListener('click', drillBack);
+
+  // Live search
+  let t;
+  $('#q').addEventListener('input', e => {
+    clearTimeout(t);
+    t = setTimeout(() => { S.query = e.target.value.trim(); renderDrillFolders(); }, 120);
+  });
+
+  // Exam type chips
+  $('#chips').addEventListener('click', e => {
+    const b = e.target.closest('[data-exam]');
+    if(b){
+      S.exam = b.dataset.exam;
+      $$('#chips .filter-chip').forEach(x => x.setAttribute('aria-pressed', x.dataset.exam === S.exam));
+      renderDrillFolders();
+    }
+  });
+
+  $('#folders').addEventListener('click', onFolderClick);
+  renderDrillFolders();
+}
+
+function matches(p, q){
+  const hay = `${p.title} ${p.subject_name} ${p.subject_code} ${p.exam_year} ${EXAMS[p.exam_type]?.label||''} ${p.scheme} sem ${p.semester}`.toLowerCase();
+  return q.toLowerCase().split(/\s+/).filter(Boolean).every(t => hay.includes(t));
+}
+
+/* Alphabetical Sorting of Subjects & Papers */
+function renderDrillFolders(){
+  const scheme = S.drill.scheme || S.prefs.scheme || 2023;
+  const sem = S.drill.sem || 1;
+  const q = S.query;
+
+  let list = S.papers.filter(p => {
+    if(p.scheme !== scheme || p.semester !== sem) return false;
+    if(q && !matches(p, q)) return false;
+    if(S.exam !== 'all' && p.exam_type !== S.exam) return false;
+    return true;
+  });
+
+  // Group by Subject Code & Name
+  const groups = new Map();
+  list.forEach(p => {
+    const k = `${p.scheme}|${p.subject_code}`;
+    if(!groups.has(k)) groups.set(k, {key:k, code:p.subject_code, name:p.subject_name, scheme:p.scheme, sem:p.semester, papers:[]});
+    groups.get(k).papers.push(p);
+  });
+
+  // SORT ALPHABETICALLY BY SUBJECT NAME (Requirement 5)
+  const arr = [...groups.values()].sort((a,b) => a.name.localeCompare(b.name, undefined, {sensitivity: 'base'}) || a.code.localeCompare(b.code));
+
+  // Sort papers inside each subject group: newest year first, then exam type
+  arr.forEach(g => g.papers.sort((a,b) => (b.exam_year - a.exam_year) || (EXAM_ORDER.indexOf(a.exam_type) - EXAM_ORDER.indexOf(b.exam_type))));
+
+  const st = $('#status');
+  const src = S.source === 'demo' ? ' (Sample entries - offline library)' : S.source === 'cached' ? ' (Viewing offline cache)' : '';
+  if(st){
+    st.textContent = S.loading ? 'Fetching papers from repository...' :
+      q ? `${list.length} paper${list.length===1?'':'s'} matching "${q}".${src}` :
+      `${list.length} paper${list.length===1?'':'s'} available for Semester ${sem} (${scheme} Scheme).${src}`;
+  }
+
+  const box = $('#folders');
+  if(!box) return;
+  if(S.loading){
+    box.innerHTML = '<div class="empty-box"><span class="spin"></span><p style="margin-top:10px">Loading papers...</p></div>';
+    return;
+  }
+  if(!arr.length){
+    box.innerHTML = `<div class="empty-box">
+      <h3>No Question Papers Found</h3>
+      <p>${q ? 'Try searching by another keyword or reset the search.' : `No ${S.exam==='all'?'':EXAMS[S.exam].label.toLowerCase()+' '}papers uploaded yet for Semester ${sem} (${scheme} Scheme).`}</p>
+      <button class="btn-primary-pill" type="button" data-go="request">${ICON.plus} Request Paper</button>
+    </div>`;
+    return;
+  }
+
+  box.innerHTML = arr.map(g => {
+    const open = S.open.has(g.key) || (arr.length === 1);
+    const kinds = [...new Set(g.papers.map(p => EXAMS[p.exam_type]?.label))].join(', ');
+    return `<article class="folder-box${open?' open':''}" data-key="${esc(g.key)}">
+      <button class="folder-head" type="button" aria-expanded="${open}" data-toggle>
+        <div class="folder-head-info">
+          <span class="code-tag">${esc(g.code)}</span>
+          <div>
+            <h3>${esc(g.name)}</h3>
+            <small>${g.papers.length} paper${g.papers.length===1?'':'s'}: ${esc(kinds)} &bull; Sem ${g.sem}</small>
+          </div>
+        </div>
+        ${ICON.chev}
+      </button>
+      <div class="papers-container">${g.papers.map(paperRow).join('')}</div>
+    </article>`;
+  }).join('');
+}
+
+function paperRow(p){
+  const e = EXAMS[p.exam_type] || {label:p.exam_type};
+  const saved = !!offlineMeta()[p.id];
+  return `<div class="paper-item" data-id="${esc(p.id)}">
+    <div class="paper-meta">
+      <span class="exam-tag">${esc(e.label)}</span>
+      <strong>${esc(p.exam_year)}${p.exam_month ? ' ' + esc(p.exam_month) : ''}</strong>
+      ${p.file_size ? `<span class="sm">${fmtSize(p.file_size)}</span>` : ''}
+      <span class="sm" data-dc>${p.download_count || 0} download${p.download_count===1?'':'s'}</span>
+      ${p.is_verified ? '<span class="sm" style="color:var(--ok);font-weight:700">✓ Verified</span>' : ''}
+      ${saved ? '<span class="sm" style="color:var(--ok);font-weight:700">✓ Saved Offline</span>' : ''}
+    </div>
+    <div class="paper-buttons">
+      <button class="btn-action" type="button" data-act="preview">${ICON.eye} Preview</button>
+      <button class="btn-action primary" type="button" data-act="download">${ICON.dl} Download</button>
+    </div>
+  </div>`;
+}
+
+function onFolderClick(e){
+  const go = e.target.closest('[data-go]');
+  if(go){
+    const reqBtn = $('.floating-nav [data-view=request]');
+    if(reqBtn) reqBtn.click();
+    if(S.drill.scheme && $('#reqScheme')) $('#reqScheme').value = S.drill.scheme;
+    if(S.drill.sem && $('#reqSem')) $('#reqSem').value = S.drill.sem;
+    return;
+  }
+  const f = e.target.closest('.folder-box'); if(!f) return;
+  if(e.target.closest('[data-toggle]')){
+    const k = f.dataset.key, open = f.classList.toggle('open');
+    open ? S.open.add(k) : S.open.delete(k);
+    $('[data-toggle]', f).setAttribute('aria-expanded', open);
+    return;
+  }
+  const b = e.target.closest('[data-act]'); if(!b) return;
+  const p = S.papers.find(x => String(x.id) === b.closest('.paper-item').dataset.id); if(!p) return;
+  b.dataset.act === 'preview' ? previewPaper(p) : downloadPaper(p, b);
+}
+
+function bindStudent(){
+  // Brand Header Click resets to landing
+  $('#headerBrandLogo').addEventListener('click', () => {
+    resetToLanding();
+  });
+
+  // Scheme Switcher (Landing page)
+  $('#schemeSeg').addEventListener('click', e => {
+    const b = e.target.closest('[data-scheme]');
+    if(b){
+      const sc = +b.dataset.scheme;
+      S.prefs.scheme = sc;
+      S.drill.scheme = sc;
+      ls.set('qbank.prefs', S.prefs);
+      $$('#schemeSeg .scheme-btn').forEach(x => x.setAttribute('aria-pressed', +x.dataset.scheme === sc));
+      toast(`${sc} Scheme selected`);
+    }
+  });
+
+  // 1. Get Started Button: scrolls to Scheme Selection Section
+  const expBtn = $('#heroExploreBtn');
+  if(expBtn){
+    expBtn.addEventListener('click', () => {
+      const el = $('#schemeSectionAnchor');
+      if(el){
+        const yOffset = -20;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
+    });
+  }
+
+  // 1st, 2nd, 3rd, 4th Year Studies Cards Click: Opens Semester Selection Window
+  $('#yearCardsGrid').addEventListener('click', e => {
+    const card = e.target.closest('[data-year]');
+    if(card){
+      const yr = +card.dataset.year;
+      openDrillYear(yr);
+    }
+  });
+
+  // Floating Bottom Navigation with Smooth View Switching
+  $('.floating-nav').addEventListener('click', e => {
+    const b = e.target.closest('[data-view]'); if(!b) return;
+    $$('.floating-nav button').forEach(x => x.removeAttribute('aria-current'));
+    b.setAttribute('aria-current','page');
+    ['browse','offline','request'].forEach(v => {
+      const pane = $('#v-'+v);
+      if(pane){
+        pane.hidden = v !== b.dataset.view;
+        if(v === b.dataset.view){
+          pane.style.animation = 'none';
+          pane.offsetHeight; /* trigger reflow */
+          pane.style.animation = 'viewFadeIn 0.28s var(--ease) forwards';
+        }
+      }
+    });
+    if(b.dataset.view === 'browse'){
+      resetToLanding();
+    } else if(b.dataset.view === 'offline'){
+      renderOffline();
+    }
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  $('#olist').addEventListener('click', onOfflineClick);
+  $('#reqForm').addEventListener('submit', submitRequest);
+}
+
+/* ---------- Download & Preview Engine ---------- */
+async function getBlob(p){
+  try{ const rec = await idb.get(String(p.id)); if(rec && rec.blob) return {blob: rec.blob, offline: true}; }catch{}
+  const r = await fetch(fileUrl(p.file_path));
+  if(!r.ok) throw new Error('File download failed (' + r.status + ')');
+  const buf = await r.blob();
+  return {blob: new Blob([buf], {type:'application/pdf'}), offline: false};
+}
+
+async function previewPaper(p){
+  if(p.demo) return toast('Sample preview entry. Connect to load live archive papers.', true);
+  const o = openOverlay(`<div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--border);gap:12px">
+      <strong>${esc(p.subject_name)}, ${esc(EXAMS[p.exam_type]?.label)} ${esc(p.exam_year)}</strong>
+      <span style="display:flex;gap:8px"><a class="btn-action" href="${esc(fileUrl(p.file_path))}" target="_blank" rel="noopener">${ICON.ext} New Tab</a>
+      <button class="btn-action primary" type="button" id="pvDl">${ICON.dl} Download</button>
+      <button class="btn-action" type="button" id="pvX" aria-label="Close">${ICON.close}</button></span></div>
+    <div style="flex:1;margin-top:12px;position:relative;background:#f0f0f0;border-radius:12px;overflow:hidden" id="pvBody">
+      <div style="display:grid;place-items:center;height:100%"><span class="spin"></span></div>
+    </div>`, 'preview-modal');
+  $('#pvX', o).onclick = closeOverlay;
+  $('#pvDl', o).onclick = () => downloadPaper(p);
+  try{
+    const {blob} = await getBlob(p);
+    const u = URL.createObjectURL(blob);
+    $('#pvBody', o).innerHTML = `<iframe src="${u}" style="width:100%;height:100%;border:none" title="PDF preview"></iframe>`;
+  }catch(e){
+    $('#pvBody', o).innerHTML = `<div style="text-align:center;padding:40px"><p style="color:var(--danger)">Unable to load PDF for preview.</p><a class="btn-action" href="${esc(fileUrl(p.file_path))}" target="_blank" rel="noopener" style="margin-top:12px">${ICON.ext} Open Directly in New Tab</a></div>`;
+  }
+}
+
+async function downloadPaper(p, btn){
+  if(p.demo) return toast('Sample paper downloaded (offline test mode).');
+  const old = btn ? btn.innerHTML : '';
+  if(btn){ btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Fetching...'; }
+  try{
+    const {blob} = await getBlob(p);
+    const u = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = u; a.download = fileName(p);
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(u), 10000);
+
+    const m = offlineMeta();
+    m[p.id] = {id:p.id, title:p.title, subject_name:p.subject_name, subject_code:p.subject_code, scheme:p.scheme, semester:p.semester, exam_type:p.exam_type, exam_year:p.exam_year, file_size:p.file_size, saved_at:Date.now()};
+    setOfflineMeta(m);
+    await idb.set(p.id, blob, m[p.id]);
+
+    p.download_count = (p.download_count || 0) + 1;
+    if(btn){
+      const row = btn.closest('.paper-item');
+      if(row){
+        const dc = $('[data-dc]', row); if(dc) dc.textContent = `${p.download_count} downloads`;
+      }
+    }
+    if(sb && !p.demo){
+      sb.from('papers').update({download_count: p.download_count}).eq('id', p.id).then(()=>{});
+    }
+    toast('Downloaded and saved for offline reading');
+    renderOffline();
+  }catch(e){
+    toast('Download error: ' + (e.message || 'File unavailable'), true);
+  }finally{
+    if(btn){ btn.disabled = false; btn.innerHTML = old; }
+  }
+}
+
+/* ---------- Offline Saved Archive ---------- */
+function renderOffline(){
+  const box = $('#olist'); if(!box) return;
+  const m = offlineMeta(), items = Object.values(m).sort((a,b) => b.saved_at - a.saved_at);
+  if(!items.length){
+    box.innerHTML = `<div class="empty-box">
+      <h3>No Offline Papers Saved</h3>
+      <p>Downloaded question papers automatically appear here so you can access them without internet connection.</p>
+    </div>`;
+    return;
+  }
+  box.innerHTML = `<p class="status-counter" style="margin-bottom:14px">${items.length} paper${items.length===1?'':'s'} saved offline on this device</p>` + items.map(x => `
+    <div class="paper-item" data-id="${esc(x.id)}" style="margin-bottom:10px">
+      <div>
+        <strong style="font-size:16px">${esc(x.subject_name)}</strong>
+        <div class="paper-meta" style="margin-top:6px">
+          <span class="exam-tag">${esc(EXAMS[x.exam_type]?.label)}</span>
+          <span class="sm">${esc(x.subject_code)} &bull; ${esc(x.exam_year)} &bull; ${x.scheme} Scheme, Sem ${x.semester}</span>
+        </div>
+      </div>
+      <div class="paper-buttons">
+        <button class="btn-action" data-oa="view">${ICON.eye} Open</button>
+        <button class="btn-action" data-oa="del" style="color:var(--danger)">${ICON.close} Remove</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function onOfflineClick(e){
+  const b = e.target.closest('[data-oa]'); if(!b) return;
+  const id = b.closest('.paper-item').dataset.id;
+  if(b.dataset.oa === 'del'){
+    const m = offlineMeta(); delete m[id]; setOfflineMeta(m);
+    await idb.del(id); renderOffline();
+    if(S.drill.step === 'papers') renderDrillFolders();
+    toast('Removed from offline cache');
+  } else if(b.dataset.oa === 'view'){
+    const p = S.papers.find(x => String(x.id) === id) || (offlineMeta()[id]);
+    if(p) previewPaper(p);
+  }
+}
+
+/* ---------- Paper Requests Engine ---------- */
+async function submitRequest(e){
+  e.preventDefault();
+  const f = e.target, btn = $('#reqBtn'), err = $('#reqErr');
+  const log = ls.get('qbank.req_log', []);
+  if(log.length && Date.now() - log[log.length-1] < 30000) return err.textContent = 'Please wait a moment before sending another request.';
+  if(log.length >= 5) return err.textContent = 'Daily limit of 5 requests reached.';
+  if(!sb || !navigator.onLine) return err.textContent = 'You are currently offline. Connect to submit a request.';
+
+  const row = {
+    subject_name: f.subject_name.value.trim(),
+    subject_code: f.subject_code.value.trim().toUpperCase() || null,
+    scheme: +f.scheme.value,
+    semester: +f.semester.value,
+    exam_type: f.exam_type.value,
+    exam_year: +f.exam_year.value || null,
+    note: f.note.value.trim() || null,
+    status: 'pending'
+  };
+  if(!row.subject_name) return err.textContent = 'Please enter a subject name.';
+
+  btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Submitting...'; err.textContent = '';
+  try{
+    const {error} = await sb.from('paper_requests').insert([row]);
+    if(error) throw error;
+    log.push(Date.now()); ls.set('qbank.req_log', log);
+    f.reset();
+    toast('Request submitted successfully! Admins will locate and upload the paper.');
+  }catch(errObj){
+    err.textContent = errObj.message || 'Error submitting request. Please try again.';
+  }finally{
+    btn.disabled = false; btn.innerHTML = `${ICON.upload} Submit Request`;
+  }
+}
+
+/* =====================================================================
+   ADMIN PORTAL
+   ===================================================================== */
+const A = {
+  user: null, tab: 'papers', papers: [], requests: [],
+  f: {q:'', year:'', scheme:'', sem:'', exam:'', status:'', ver:'', sort:'newest'},
+  def: {scheme:2023, sem:1, exam:'series1', year: new Date().getFullYear(), month:''},
+  queue: [], limit: 50
+};
+
+const lock = {
+  get(){ return ls.get('qbank.adm.lock', {n:0, until:0}); },
+  fail(){ const l = this.get(); l.n++; if(l.n >= 5) l.until = Date.now() + Math.min(900000, 30000 * Math.pow(2, l.n - 5)); ls.set('qbank.adm.lock', l); return l; },
+  clear(){ ls.set('qbank.adm.lock', {n:0, until:0}); }
+};
+
+async function mountAdmin(){
+  document.title = 'Q-Bank Admin Portal';
+  $('meta[name=robots]').content = 'noindex,nofollow';
+  if(!sb){
+    $('#app').innerHTML = `<div class="wrap"><div class="admin-login-frame"><h2>Connection Error</h2><p style="color:var(--muted)">Unable to reach Supabase. Connect to the internet and refresh.</p></div></div>`;
+    return;
+  }
+  const {data:{session}} = await sb.auth.getSession();
+  if(session && await verifyAdmin(session.user.id)){ A.user = session.user; return startAdmin(); }
+  if(session) await sb.auth.signOut();
+  renderLogin();
+}
+
+async function verifyAdmin(uid){
+  const {data, error} = await sb.from('admins').select('user_id').eq('user_id', uid).maybeSingle();
+  return !error && !!data;
+}
+
+function renderLogin(msg){
+  // REMOVED LOGIN INSTRUCTIONS BOX AS REQUESTED
+  $('#app').innerHTML = `<div class="wrap">
+    <div class="admin-login-frame">
+      <img src="assets/laptop_study.jpg" alt="Admin login" onerror="this.style.display='none'">
+      <h2>Admin Sign In</h2>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:18px">Sign in to manage question papers &amp; review student requests.</p>
+      
+      ${msg ? `<p style="color:var(--danger);font-size:13px;font-weight:600;margin-bottom:12px">${esc(msg)}</p>` : ''}
+      <form class="form-grid" id="loginForm" novalidate>
+        <label class="field-label" style="text-align:left">Admin Username
+          <input name="u" autocomplete="username" autocapitalize="none" spellcheck="false" required autofocus placeholder="e.g. admin">
+        </label>
+        <label class="field-label" style="text-align:left">Password
+          <input name="p" type="password" autocomplete="current-password" required placeholder="Enter password">
+        </label>
+        <div class="err-msg" id="lerr" role="alert"></div>
+        <button class="btn-primary-pill" type="submit" id="lbtn" style="width:100%;justify-content:center;margin-top:6px">
+          ${ICON.lock} Sign In to Console
+        </button>
+        <div style="margin-top:16px">
+          <a href="#" id="backBrowse" style="font-size:13px;color:var(--muted);font-weight:600">&larr; Return to Student View</a>
+        </div>
+      </form>
+    </div>
+  </div>`;
+
+  $('#backBrowse').onclick = e => { e.preventDefault(); location.hash = ''; };
+
+  const tick = () => {
+    const l = lock.get(), left = Math.ceil((l.until - Date.now())/1000), b = $('#lbtn'); if(!b) return clearInterval(tm);
+    if(left > 0){ b.disabled = true; $('#lerr').textContent = `Too many failed attempts. Try again in ${left}s.`; }
+    else if(b.disabled && b.dataset.busy !== '1'){ b.disabled = false; $('#lerr').textContent = ''; }
+  };
+  const tm = setInterval(tick, 1000); tick();
+
+  $('#loginForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const l = lock.get(); if(l.until > Date.now()) return tick();
+    const u = String(e.target.u.value).trim().toLowerCase().replace(/@.*$/, '').replace(/[^a-z0-9._-]/g, '');
+    const p = e.target.p.value;
+    const err = $('#lerr'), b = $('#lbtn');
+    if(!u || !p) return err.textContent = 'Please enter both username and password.';
+    b.disabled = true; b.dataset.busy = '1'; b.textContent = 'Authenticating...'; err.textContent = '';
+    const {data, error} = await sb.auth.signInWithPassword({email: `${u}@${ADMIN_DOMAIN}`, password: p});
+    let ok = !error && data.user && await verifyAdmin(data.user.id);
+    if(!ok){
+      if(data && data.session) await sb.auth.signOut();
+      const nl = lock.fail();
+      b.dataset.busy = ''; b.disabled = false; b.innerHTML = `${ICON.lock} Sign In to Console`;
+      err.textContent = nl.until > Date.now() ? 'Too many failed attempts. Please wait.' : 'Invalid administrator credentials.';
+      e.target.p.value = ''; return tick();
+    }
+    lock.clear(); clearInterval(tm); A.user = data.user; startAdmin();
+  });
+}
+
+async function adminSignOut(msg){
+  clearInterval(idleCheck); idleCheck = null;
+  await sb.auth.signOut(); A.user = null; A.papers = []; A.requests = [];
+  renderLogin(msg);
+}
+
+function startIdle(){
+  let last = Date.now();
+  const bump = () => last = Date.now();
+  ['pointerdown','keydown','scroll','touchstart'].forEach(ev => window.addEventListener(ev, bump, {passive:true}));
+  clearInterval(idleCheck);
+  idleCheck = setInterval(() => { if(Date.now() - last > IDLE_MS) adminSignOut('Signed out after 30 minutes of inactivity.'); }, 20000);
+}
+
+async function startAdmin(){
+  startIdle();
+  $('#app').innerHTML = `<div class="wrap" style="padding-bottom:80px">
+    <div class="admin-header">
+      <div class="brand-group" onclick="location.hash=''">
+        <div class="brand-title">Q-Bank Admin</div>
+        <div class="brand-sub">CUSAT EEE &bull; Archive Console</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn-action" id="pwBtn">${ICON.settings} Change Password</button>
+        <button class="btn-action" id="soBtn" style="color:var(--danger)">${ICON.logout} Sign Out</button>
+      </div>
+    </div>
+    
+    <div class="admin-tabs" role="tablist">
+      ${[['papers','Papers',ICON.file],['upload','Upload',ICON.upload],['requests','Requests',ICON.plus],['overview','Overview',ICON.eye]].map(([k,l,ic]) => `
+        <button role="tab" data-tab="${k}" aria-selected="${A.tab===k}">${ic} ${l}<span id="bd-${k}"></span></button>
+      `).join('')}
+    </div>
+    
+    <div id="apane"><div style="text-align:center;padding:40px"><span class="spin"></span> Loading...</div></div>
+  </div>`;
+
+  $('#soBtn').onclick = () => adminSignOut();
+  $('#pwBtn').onclick = changePassword;
+  $('.admin-tabs').addEventListener('click', e => {
+    const b = e.target.closest('[data-tab]');
+    if(b){
+      A.tab = b.dataset.tab;
+      $$('.admin-tabs button').forEach(x => x.setAttribute('aria-selected', x===b));
+      renderTab();
+    }
+  });
+
+  await Promise.all([loadAdminPapers(), loadAdminRequests()]);
+  renderTab();
+}
+
+async function loadAdminPapers(){
+  const out = []; let from = 0;
+  for(;;){
+    const {data, error} = await sb.from('papers').select('*').order('created_at',{ascending:false}).range(from, from+999);
+    if(error){ toast('Error loading papers: ' + error.message, true); break; }
+    out.push(...data); if(data.length < 1000) break; from += 1000;
+  }
+  A.papers = out;
+  enrichWithVerification(A.papers);
+}
+
+async function loadAdminRequests(){
+  const {data, error} = await sb.from('paper_requests').select('*').order('created_at',{ascending:false}).limit(500);
+  if(error) toast('Error loading requests: ' + error.message, true); else A.requests = data;
+  const n = A.requests.filter(r => r.status === 'pending').length;
+  const bd = $('#bd-requests'); if(bd) bd.textContent = n ? ` (${n})` : '';
+}
+
+function renderTab(){
+  const pane = $('#apane'); if(!pane) return;
+  if(A.tab === 'papers') renderPapersTab(pane);
+  else if(A.tab === 'upload') renderUploadTab(pane);
+  else if(A.tab === 'requests') renderRequestsTab(pane);
+  else renderOverview(pane);
+}
+
+/* ---- Papers Management Tab ---- */
+function filteredPapers(){
+  const f = A.f;
+  let list = A.papers.filter(p =>
+    (!f.q || matches(p, f.q)) &&
+    (!f.year || Math.ceil(p.semester / 2) === +f.year) &&
+    (!f.scheme || p.scheme === +f.scheme) &&
+    (!f.sem || p.semester === +f.sem) &&
+    (!f.exam || p.exam_type === f.exam) &&
+    (!f.status || (f.status === 'pub' ? p.is_published : !p.is_published)) &&
+    (!f.ver || (f.ver === 'verified' ? !!p.is_verified : !p.is_verified))
+  );
+
+  if(f.sort === 'az'){
+    list.sort((a,b) => a.subject_name.localeCompare(b.subject_name) || a.subject_code.localeCompare(b.subject_code));
+  } else if(f.sort === 'popular'){
+    list.sort((a,b) => (b.download_count || 0) - (a.download_count || 0));
+  }
+  return list;
+}
+
+function renderPapersTab(pane){
+  pane.innerHTML = `
+    <div class="admin-filter-bar">
+      <input class="admin-input" id="fq" type="search" placeholder="Search archive papers by code, subject, title..." value="${esc(A.f.q)}">
+      <select class="admin-input" id="fyr">
+        <option value="">All Academic Years</option>
+        <option value="1" ${A.f.year==='1'?'selected':''}>1st Year (Sem 1 &amp; 2)</option>
+        <option value="2" ${A.f.year==='2'?'selected':''}>2nd Year (Sem 3 &amp; 4)</option>
+        <option value="3" ${A.f.year==='3'?'selected':''}>3rd Year (Sem 5 &amp; 6)</option>
+        <option value="4" ${A.f.year==='4'?'selected':''}>4th Year (Sem 7 &amp; 8)</option>
+      </select>
+      <select class="admin-input" id="fs"><option value="">All Schemes</option>${SCHEMES.map(s => `<option ${A.f.scheme==s?'selected':''}>${s}</option>`).join('')}</select>
+      <select class="admin-input" id="fm"><option value="">All Semesters</option>${[1,2,3,4,5,6,7,8].map(s => `<option value="${s}" ${A.f.sem==s?'selected':''}>Semester ${s}</option>`).join('')}</select>
+      <select class="admin-input" id="fe"><option value="">All Exams</option>${EXAM_ORDER.map(k => `<option value="${k}" ${A.f.exam===k?'selected':''}>${EXAMS[k].label}</option>`).join('')}</select>
+      <select class="admin-input" id="fver">
+        <option value="">All Status (Verified &amp; Pending)</option>
+        <option value="unverified" ${A.f.ver==='unverified'?'selected':''}>⏳ Unverified Only</option>
+        <option value="verified" ${A.f.ver==='verified'?'selected':''}>✓ Verified Only</option>
+      </select>
+      <select class="admin-input" id="fsrt">
+        <option value="newest" ${A.f.sort==='newest'?'selected':''}>Sort: Newest</option>
+        <option value="az" ${A.f.sort==='az'?'selected':''}>Sort: Alphabetical (A-Z)</option>
+        <option value="popular" ${A.f.sort==='popular'?'selected':''}>Sort: Most Downloaded</option>
+      </select>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px;flex-wrap:wrap">
+      <span class="status-counter" id="pCounter"></span>
+      <button class="btn-action primary" id="btnVerifyAll" style="font-weight:600;font-size:12px">
+        ${ICON.check} Verify All Visible
+      </button>
+    </div>
+    <div id="plistA"></div>`;
+
+  let t;
+  $('#fq').oninput = e => { clearTimeout(t); t = setTimeout(() => { A.f.q = e.target.value.trim(); A.limit = 50; drawPapers(); }, 120); };
+  [['#fyr','year'],['#fs','scheme'],['#fm','sem'],['#fe','exam'],['#fver','ver'],['#fsrt','sort']].forEach(([id,k]) => {
+    const el = $(id); if(el) el.onchange = e => { A.f[k] = e.target.value; A.limit = 50; drawPapers(); };
+  });
+
+  const btnAll = $('#btnVerifyAll');
+  if(btnAll){
+    btnAll.onclick = async () => {
+      const list = filteredPapers().slice(0, A.limit);
+      const toCheck = list.filter(p => !p.is_verified);
+      if(!toCheck.length) return toast('All visible papers are already verified!');
+      btnAll.disabled = true;
+      let okCount = 0;
+      for(let i = 0; i < toCheck.length; i++){
+        btnAll.textContent = `Verifying (${i+1}/${toCheck.length})...`;
+        const item = toCheck[i];
+        const ok = await verifyFile(item);
+        if(ok) okCount++;
+        await markPaperVerified(item, ok);
+      }
+      btnAll.disabled = false;
+      btnAll.innerHTML = `${ICON.check} Verify All Visible`;
+      drawPapers();
+      toast(`Verification complete: ${okCount} of ${toCheck.length} verified & updated in app`);
+    };
+  }
+
+  $('#plistA').addEventListener('click', onPaperAction);
+  drawPapers();
+}
+
+function drawPapers(){
+  const list = filteredPapers(), box = $('#plistA'), counter = $('#pCounter'); if(!box) return;
+  const verCount = list.filter(p => p.is_verified).length;
+  if(counter) counter.textContent = `${list.length} paper${list.length===1?'':'s'} found (${verCount} verified)`;
+  if(!list.length){
+    box.innerHTML = `<div class="empty-box"><h3>No Papers Match</h3><p>${A.papers.length ? 'Adjust your search or verification filters.' : 'Upload papers from the Upload tab.'}</p></div>`;
+    return;
+  }
+  box.innerHTML = list.slice(0, A.limit).map(p => {
+    const isVer = !!p.is_verified;
+    return `
+    <div class="admin-paper-row ${p.is_published?'':'unpub'}" data-id="${p.id}">
+      <div>
+        <h3 style="font-size:18px">${esc(p.subject_name)} <span style="color:var(--muted)">(${esc(p.subject_code)})</span></h3>
+        <div class="paper-meta" style="margin-top:6px">
+          <span class="exam-tag">${EXAMS[p.exam_type]?.label}</span>
+          <strong>${p.exam_year}${p.exam_month?' '+esc(p.exam_month):''}</strong>
+          <span class="sm">${p.scheme} Scheme, Sem ${p.semester}</span>
+          <span class="sm">${fmtSize(p.file_size)}</span>
+          <span class="sm">${p.download_count} downloads</span>
+          ${p.is_published?'':`<span class="exam-tag" style="background:#ffdede;color:#b71c1c">Hidden</span>`}
+          ${isVer ? `<span class="exam-tag" style="background:#e8f5e9;color:#2e7d32;border:1px solid #c8e6c9;font-weight:600">✓ Verified</span>` : `<span class="exam-tag" style="background:#fff3cd;color:#856404;border:1px solid #ffeeba;font-weight:600">Unverified</span>`}
+          <span class="sm" data-vp></span>
+        </div>
+      </div>
+      <div class="paper-buttons">
+        <button class="btn-action" data-a="view">${ICON.eye} View</button>
+        <button class="btn-action" data-a="edit">${ICON.settings} Edit</button>
+        <button class="btn-action ${isVer?'verified':''}" data-a="verify" style="${isVer?'color:var(--ok);border-color:var(--ok);background:#f0fdf4':'font-weight:600'}" title="${isVer?'File verified OK. Click to re-check.':'Verify file existence in repository'}">
+          ${ICON.check} ${isVer ? 'Verified' : 'Verify'}
+        </button>
+        <button class="btn-action" data-a="toggle">${p.is_published?'Hide':'Publish'}</button>
+        <button class="btn-action" data-a="del" style="color:var(--danger)">${ICON.close} Delete</button>
+      </div>
+    </div>`;
+  }).join('')
+  + (list.length > A.limit ? `<div style="text-align:center;padding:16px"><button class="btn-primary-pill" data-a="more">Load More</button></div>` : '');
+}
+
+async function verifyFile(p){
+  try{
+    if(!p || !p.file_path) return false;
+    const r = await fetch(fileUrl(p.file_path), {method:'HEAD'});
+    if(!r.ok) return false;
+    const ct = (r.headers.get('content-type') || '').toLowerCase();
+    return r.ok && (ct.includes('pdf') || ct.includes('octet-stream') || !ct);
+  }catch{ return false; }
+}
+
+async function onPaperAction(e){
+  const b = e.target.closest('[data-a]'); if(!b) return;
+  if(b.dataset.a === 'more'){ A.limit += 50; return drawPapers(); }
+  const row = b.closest('.admin-paper-row'), p = A.papers.find(x => x.id === row.dataset.id); if(!p) return;
+  const a = b.dataset.a;
+  if(a === 'view') previewPaper(p);
+  else if(a === 'edit') editPaper(p);
+  else if(a === 'verify'){
+    const v = $('[data-vp]', row);
+    b.disabled = true;
+    b.innerHTML = '<span class="spin" style="width:11px;height:11px;display:inline-block;vertical-align:middle;margin-right:4px"></span> Checking...';
+    if(v){ v.textContent = 'Checking storage...'; v.style.color = 'var(--muted)'; }
+    const ok = await verifyFile(p);
+    await markPaperVerified(p, ok);
+    b.disabled = false;
+    drawPapers();
+    toast(ok ? `✓ "${p.subject_name}" verified & updated in app` : `✕ PDF missing in storage`, !ok);
+  } else if(a === 'toggle'){
+    const {error} = await sb.from('papers').update({is_published: !p.is_published}).eq('id', p.id);
+    if(error) return toast(error.message, true);
+    p.is_published = !p.is_published; drawPapers(); toast(p.is_published ? 'Published' : 'Hidden');
+  } else if(a === 'del'){
+    if(!confirm(`Delete "${p.title}" and its PDF permanently?`)) return;
+    const {error} = await sb.from('papers').delete().eq('id', p.id);
+    if(error) return toast(error.message, true);
+    const rm = await sb.storage.from(BUCKET).remove([p.file_path]);
+    A.papers = A.papers.filter(x => x.id !== p.id); drawPapers();
+    toast(rm.error ? 'Row deleted, PDF removal pending' : 'Paper deleted', !!rm.error);
+  }
+}
+
+function editPaper(p){
+  const o = openOverlay(`<h2 style="font-family:var(--font-display);font-size:26px;margin-bottom:16px">Edit Paper</h2><form class="form-grid" id="edForm">
+    <label class="field-label">Title<input name="title" required maxlength="200" value="${esc(p.title)}"></label>
+    <div class="grid-2">
+      <label class="field-label">Subject Name<input name="subject_name" required maxlength="150" value="${esc(p.subject_name)}"></label>
+      <label class="field-label">Subject Code<input name="subject_code" required maxlength="20" value="${esc(p.subject_code)}"></label>
+    </div>
+    <div class="grid-3">
+      <label class="field-label">Scheme<select name="scheme">${SCHEMES.map(s => `<option ${s===p.scheme?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Semester<select name="semester">${[1,2,3,4,5,6,7,8].map(s => `<option ${s===p.semester?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Exam<select name="exam_type">${EXAM_ORDER.map(k => `<option value="${k}" ${k===p.exam_type?'selected':''}>${EXAMS[k].label}</option>`).join('')}</select></label>
+    </div>
+    <div class="grid-2">
+      <label class="field-label">Exam Year<input name="exam_year" type="number" min="2015" max="2100" value="${p.exam_year}"></label>
+      <label class="field-label">Month (optional)<input name="exam_month" maxlength="12" value="${esc(p.exam_month||'')}"></label>
+    </div>
+    <label class="field-label" style="display:flex;gap:10px;align-items:center;cursor:pointer">
+      <input type="checkbox" name="is_published" ${p.is_published?'checked':''} style="width:20px;height:20px;accent-color:var(--ink)"> Visible to students
+    </label>
+    <div class="err-msg" id="edErr" role="alert"></div>
+    <div style="display:flex;gap:10px;margin-top:6px">
+      <button class="btn-primary-pill" type="submit">${ICON.check} Save Changes</button>
+      <button class="btn-action" type="button" id="edX">${ICON.close} Cancel</button>
+    </div>
+  </form>`);
+  $('#edX', o).onclick = closeOverlay;
+  $('#edForm', o).onsubmit = async e => {
+    e.preventDefault(); const f = e.target;
+    const row = {
+      title: f.title.value.trim(),
+      subject_name: f.subject_name.value.trim(),
+      subject_code: f.subject_code.value.trim().toUpperCase().replace(/\s+/g,''),
+      scheme: +f.scheme.value,
+      semester: +f.semester.value,
+      exam_type: f.exam_type.value,
+      exam_year: +f.exam_year.value,
+      exam_month: f.exam_month.value.trim()||null,
+      is_published: f.is_published.checked
+    };
+    const {data, error} = await sb.from('papers').update(row).eq('id', p.id).select().single();
+    if(error) return $('#edErr').textContent = error.message;
+    Object.assign(p, data); closeOverlay(); drawPapers(); toast('Saved');
+  };
+}
+
+/* ---- Upload Tab ---- */
+function guessMeta(name){
+  const base = name.replace(/\.pdf$/i, '');
+  const code = (base.match(/\b([A-Za-z]{2,4})[\s_-]?(\d{3,4})\b/) || []);
+  const yr = (base.match(/\b(20[1-9]\d)\b/) || [])[1];
+  const l = base.toLowerCase();
+  const exam = /supp/.test(l) ? 'supplementary' : /(series|internal|ia)[\s_-]?2|\bs2\b/.test(l) ? 'series2' : /(series|internal|ia)[\s_-]?1|\bs1\b/.test(l) ? 'series1' : /end|esem|final|semester/.test(l) ? 'endsem' : '';
+  let nm = base.replace(/[_-]+/g,' ').replace(code[0]||'', '').replace(/\b20\d\d\b/g,'').replace(/supplementary|series|internal|end\s*sem(ester)?|\bs[12]\b/ig,'').replace(/\s+/g,' ').trim();
+  return {code: code[1] ? (code[1]+code[2]).toUpperCase() : '', name: nm, year: yr ? +yr : '', exam};
+}
+
+function renderUploadTab(pane){
+  const d = A.def;
+  pane.innerHTML = `
+  <div class="panel-card" style="margin-bottom:20px">
+    <strong style="font-size:18px;font-weight:800;display:block;margin-bottom:12px">Upload Defaults</strong>
+    <div class="grid-2">
+      <label class="field-label">Academic Year
+        <select id="dYrLevel">
+          <option value="1">1st Year Studies (Sem 1 &amp; 2)</option>
+          <option value="2">2nd Year Studies (Sem 3 &amp; 4)</option>
+          <option value="3">3rd Year Studies (Sem 5 &amp; 6)</option>
+          <option value="4">4th Year Studies (Sem 7 &amp; 8)</option>
+        </select>
+      </label>
+      <label class="field-label">Scheme<select id="dSc">${SCHEMES.map(s => `<option ${s==d.scheme?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Semester<select id="dSe">${[1,2,3,4,5,6,7,8].map(s => `<option ${s==d.sem?'selected':''}>${s}</option>`).join('')}</select></label>
+      <label class="field-label">Exam<select id="dEx">${EXAM_ORDER.map(k => `<option value="${k}" ${k===d.exam?'selected':''}>${EXAMS[k].label}</option>`).join('')}</select></label>
+      <label class="field-label">Exam Year<input id="dYr" type="number" min="2015" max="2100" value="${d.year}"></label>
+    </div>
+  </div>
+  
+  <div class="drop-zone" id="drop" tabindex="0" role="button">
+    <img src="assets/explorer.jpg" alt="Upload illustration" onerror="this.style.display='none'">
+    <strong>Drop Question Papers here or Click to Browse</strong>
+    <p style="color:var(--muted);font-size:13px;margin:4px 0 0">Single or multiple PDF files. Up to 25 MB each.</p>
+    <input type="file" id="pick" accept="application/pdf,.pdf" multiple hidden>
+  </div>
+  
+  <div id="queue" style="margin-top:20px"></div>
+  <div id="qbar" style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap" hidden>
+    <button class="btn-primary-pill" id="upAll">${ICON.upload} Upload All Files</button>
+    <button class="btn-action" id="clrQ">${ICON.close} Clear Finished</button>
+  </div>`;
+
+  $('#dYrLevel').onchange = e => {
+    const y = +e.target.value;
+    const sem = (y - 1) * 2 + 1;
+    $('#dSe').value = sem;
+    A.def.sem = sem;
+  };
+
+  const rd = () => A.def = {scheme:+$('#dSc').value, sem:+$('#dSe').value, exam:$('#dEx').value, year:+$('#dYr').value || new Date().getFullYear(), month:''};
+  ['#dSc','#dSe','#dEx','#dYr'].forEach(i => $(i).onchange = rd);
+
+  const drop = $('#drop'), pick = $('#pick');
+  drop.onclick = () => pick.click();
+  drop.onkeydown = e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); pick.click(); } };
+  ['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+  ['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+  drop.addEventListener('drop', e => addFiles(e.dataTransfer.files));
+  pick.onchange = () => { addFiles(pick.files); pick.value = ''; };
+
+  $('#queue').addEventListener('input', onQueueInput);
+  $('#queue').addEventListener('click', e => {
+    const b = e.target.closest('[data-q]'); if(!b) return;
+    const it = A.queue.find(x => x.id === b.closest('.admin-paper-row').dataset.id);
+    if(b.dataset.q === 'rm') A.queue = A.queue.filter(x => x !== it);
+    else if(b.dataset.q === 'up') return uploadItem(it);
+    drawQueue();
+  });
+  $('#upAll').onclick = async () => {
+    const b = $('#upAll'); b.disabled = true;
+    for(const it of A.queue.filter(x => x.status === 'ready' || x.status === 'error')) await uploadItem(it);
+    b.disabled = false;
+  };
+  $('#clrQ').onclick = () => { A.queue = A.queue.filter(x => x.status !== 'done'); drawQueue(); };
+  drawQueue();
+}
+
+function addFiles(files){
+  [...files].forEach(file => {
+    if(!file.name.toLowerCase().endsWith('.pdf')) return toast(`"${file.name}" ignored (PDF required)`, true);
+    if(file.size > MAX_PDF) return toast(`"${file.name}" exceeds 25 MB limit`, true);
+    const meta = guessMeta(file.name);
+    A.queue.push({
+      id: Math.random().toString(36).slice(2),
+      file,
+      fileName: file.name,
+      code: meta.code || '',
+      name: meta.name || file.name.replace(/\.pdf$/i,''),
+      exam: meta.exam || A.def.exam,
+      year: meta.year || A.def.year,
+      scheme: A.def.scheme,
+      sem: A.def.sem,
+      status: 'ready',
+      msg: ''
+    });
+  });
+  drawQueue();
+}
+
+function drawQueue(){
+  const box = $('#queue'), bar = $('#qbar');
+  if(!box) return;
+  if(!A.queue.length){ box.innerHTML = ''; if(bar) bar.hidden = true; return; }
+  if(bar) bar.hidden = false;
+  box.innerHTML = `<h3 style="margin-bottom:12px;font-size:18px">Upload Queue (${A.queue.length} file${A.queue.length===1?'':'s'})</h3>` + A.queue.map(it => `
+    <div class="admin-paper-row" data-id="${it.id}">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <strong>${esc(it.fileName || it.file.name)} <span style="color:var(--muted);font-size:12px">(${fmtSize(it.file.size)})</span></strong>
+        <span class="exam-tag" style="background:${it.status==='done'?'var(--ok)':it.status==='error'?'var(--danger)':'#e0e0e0'};color:${it.status==='ready'?'#111':'#fff'}">${it.status}</span>
+      </div>
+      ${it.status==='done' ? `<p style="color:var(--ok);font-size:13px;font-weight:700">✓ Uploaded &amp; published to repository</p>` : `
+      <div class="grid-2" style="margin-top:8px">
+        <label class="field-label">File Name (PDF)
+          <input class="admin-input" data-k="fileName" value="${esc(it.fileName || it.file.name)}" placeholder="e.g. EE201_Circuit_Theory_2024.pdf">
+        </label>
+        <label class="field-label">Subject Name
+          <input class="admin-input" data-k="name" value="${esc(it.name)}" maxlength="150" placeholder="e.g. Circuit Theory">
+        </label>
+      </div>
+      <div class="grid-4" style="margin-top:6px">
+        <label class="field-label">Subject Code
+          <input class="admin-input" data-k="code" value="${esc(it.code)}" maxlength="20" placeholder="EE201">
+        </label>
+        <label class="field-label">Exam
+          <select class="admin-input" data-k="exam">
+            ${EXAM_ORDER.map(k => `<option value="${k}" ${k===it.exam?'selected':''}>${EXAMS[k].label}</option>`).join('')}
+          </select>
+        </label>
+        <label class="field-label">Exam Year
+          <input class="admin-input" data-k="year" type="number" value="${it.year}">
+        </label>
+        <label class="field-label">Scheme &amp; Semester
+          <div style="display:flex;gap:6px">
+            <select class="admin-input" data-k="scheme" style="flex:1">${SCHEMES.map(s => `<option ${s==it.scheme?'selected':''}>${s}</option>`).join('')}</select>
+            <select class="admin-input" data-k="sem" style="flex:1">${[1,2,3,4,5,6,7,8].map(s => `<option ${s==it.sem?'selected':''}>S${s}</option>`).join('')}</select>
+          </div>
+        </label>
+      </div>`}
+      ${it.msg ? `<div style="color:var(--danger);font-size:13px">${esc(it.msg)}</div>` : ''}
+      ${it.status==='done' ? '' : `
+      <div class="paper-buttons">
+        <button class="btn-primary-pill" data-q="up" style="padding:6px 14px;font-size:12px">${ICON.upload} Upload</button>
+        <button class="btn-action" data-q="rm" style="color:var(--danger)">${ICON.close} Remove</button>
+      </div>`}
+    </div>`).join('');
+}
+
+function onQueueInput(e){
+  const inp = e.target.closest('[data-k]'), row = e.target.closest('.admin-paper-row');
+  if(!inp || !row) return;
+  const it = A.queue.find(x => x.id === row.dataset.id); if(!it) return;
+  const k = inp.dataset.k, v = inp.value;
+  it[k] = (k === 'year' || k === 'scheme' || k === 'sem') ? +v : v;
+  if(k === 'fileName'){
+    const titleStrong = $('strong', row);
+    if(titleStrong) titleStrong.innerHTML = `${esc(v || it.file.name)} <span style="color:var(--muted);font-size:12px">(${fmtSize(it.file.size)})</span>`;
+  }
+}
+
+async function uploadItem(it){
+  if(it.status === 'uploading' || it.status === 'done') return;
+  const code = String(it.code).trim().toUpperCase().replace(/\s+/g,'');
+  const name = String(it.name).trim();
+  if(!code || !name){ it.status = 'error'; it.msg = 'Subject code and name are required'; return drawQueue(); }
+
+  let cleanName = String(it.fileName || it.file.name).trim();
+  if(!cleanName) cleanName = it.file.name;
+  if(!cleanName.toLowerCase().endsWith('.pdf')) cleanName += '.pdf';
+  it.fileName = cleanName;
+  const safeName = cleanName.replace(/[^a-zA-Z0-9._-]/g, '_');
+
+  it.status = 'uploading'; it.msg = ''; drawQueue();
+
+  try{
+    const path = `${it.scheme}/sem${it.sem}/${Date.now()}_${safeName}`;
+    const up = await sb.storage.from(BUCKET).upload(path, it.file, {contentType:'application/pdf', upsert:false});
+    if(up.error) throw up.error;
+
+    const {data, error} = await sb.from('papers').insert({
+      title: `${name}: ${EXAMS[it.exam].label} ${it.year}`,
+      subject_name: name,
+      subject_code: code,
+      scheme: it.scheme,
+      semester: it.sem,
+      exam_type: it.exam,
+      exam_year: it.year,
+      file_path: path,
+      file_size: it.file.size,
+      download_count: 0,
+      is_published: true
+    }).select().single();
+    if(error){ await sb.storage.from(BUCKET).remove([path]); throw error; }
+
+    it.status = 'done';
+    data.is_verified = true;
+    await markPaperVerified(data, true);
+    A.papers.unshift(data);
+    toast(`Uploaded & verified: ${cleanName}`);
+  }catch(err){
+    it.status = 'error'; it.msg = err.message || 'Upload error';
+  }
+  drawQueue();
+}
+
+/* ---- Requests Tab ---- */
+function renderRequestsTab(pane){
+  if(!A.requests.length){
+    pane.innerHTML = `<div class="empty-box"><h3>No Requests Yet</h3><p>Student requests will appear here when submitted.</p></div>`;
+    return;
+  }
+  pane.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <span class="status-counter">${A.requests.length} requests received</span>
+      <button class="btn-action" id="refReq">${ICON.settings} Refresh</button>
+    </div>` + A.requests.map(r => {
+      const yr = Math.ceil(r.semester / 2);
+      return `
+      <div class="admin-paper-row" data-id="${r.id}" style="border-left:4px solid ${r.status==='pending'?'#f59e0b':r.status==='fulfilled'?'var(--ok)':'#999'}">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+          <div>
+            <h3>${esc(r.subject_name)} ${r.subject_code?`<span style="color:var(--muted)">(${esc(r.subject_code)})</span>`:''}</h3>
+            <div class="paper-meta" style="margin-top:6px">
+              <span class="exam-tag">${EXAMS[r.exam_type]?.label}</span>
+              <span class="sm">${r.scheme} Scheme &bull; Year ${yr} (Sem ${r.semester})${r.exam_year?', '+r.exam_year:''}</span>
+              <span class="sm">${fmtDate(r.created_at)}</span>
+              <span class="exam-tag" style="background:${r.status==='pending'?'#f59e0b':r.status==='fulfilled'?'var(--ok)':'#999'}">${r.status}</span>
+            </div>
+            ${r.note ? `<p style="color:var(--muted);font-size:13px;margin:8px 0 0">${esc(r.note)}</p>` : ''}
+          </div>
+          <div class="paper-buttons">
+            ${r.status === 'pending' ? `
+              <button class="btn-action primary" data-ra="ful">${ICON.check} Mark Fulfilled</button>
+              <button class="btn-action" data-ra="rej" style="color:var(--danger)">${ICON.close} Reject</button>
+            ` : `<button class="btn-action" data-ra="pen">Reopen</button>`}
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+  $('#refReq').onclick = async () => { await loadAdminRequests(); renderRequestsTab(pane); };
+  pane.onclick = async e => {
+    const b = e.target.closest('[data-ra]'); if(!b) return;
+    const row = b.closest('.admin-paper-row'), r = A.requests.find(x => x.id === row.dataset.id); if(!r) return;
+    const st = b.dataset.ra === 'ful' ? 'fulfilled' : b.dataset.ra === 'rej' ? 'rejected' : 'pending';
+    const {error} = await sb.from('paper_requests').update({status: st}).eq('id', r.id);
+    if(error) return toast(error.message, true);
+    r.status = st; renderRequestsTab(pane); toast(`Request marked ${st}`);
+  };
+}
+
+/* ---- Overview Tab ---- */
+function renderOverview(pane){
+  const P = A.papers, pub = P.filter(p => p.is_published).length, dl = P.reduce((a,p) => a + (p.download_count||0), 0);
+  const ver = P.filter(p => p.is_verified).length;
+  const bytes = P.reduce((a,p) => a + (p.file_size||0), 0), top = [...P].sort((a,b) => (b.download_count||0) - (a.download_count||0)).slice(0,5).filter(p => p.download_count);
+  pane.innerHTML = `
+    <div class="admin-stats-grid">
+      <div class="admin-stat-card"><b>${P.length}</b><span>Total Papers (${pub} published)</span></div>
+      <div class="admin-stat-card"><b>${ver} / ${P.length}</b><span>Files Verified</span></div>
+      <div class="admin-stat-card"><b>${dl}</b><span>Downloads Recorded</span></div>
+      <div class="admin-stat-card"><b>${A.requests.filter(r=>r.status==='pending').length}</b><span>Pending Requests</span></div>
+      <div class="admin-stat-card"><b>${fmtSize(bytes) || '0 KB'}</b><span>Storage Used</span></div>
+    </div>
+
+    <div class="panel-card" style="margin-bottom:20px">
+      <h3 style="margin-bottom:14px;font-size:18px">Archive by Academic Year</h3>
+      ${YEAR_NAMES.map((nm, idx) => {
+        const y = idx + 1;
+        const count = P.filter(p => Math.ceil(p.semester / 2) === y).length;
+        const sA = (y - 1) * 2 + 1, sB = sA + 1;
+        return `
+          <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)">
+            <span>${nm} <small style="color:var(--muted)">(Sem ${sA} &amp; ${sB})</small></span>
+            <strong>${count} Papers</strong>
+          </div>
+        `;
+      }).join('')}
+    </div>
+
+    <div class="panel-card" style="margin-bottom:20px">
+      <h3 style="margin-bottom:14px;font-size:18px">Archive by Scheme</h3>
+      ${SCHEMES.map(s => `
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)">
+          <span>${s} Scheme</span>
+          <strong>${P.filter(p => p.scheme===s).length} Papers</strong>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="panel-card">
+      <h3 style="margin-bottom:14px;font-size:18px">Top Downloaded Papers</h3>
+      ${top.length ? top.map(p => `
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border)">
+          <span>${esc(p.subject_name)} &bull; ${EXAMS[p.exam_type]?.label} ${p.exam_year}</span>
+          <strong>${p.download_count}</strong>
+        </div>
+      `).join('') : '<p style="color:var(--muted)">No download activity yet.</p>'}
+    </div>`;
+}
+
+/* ---- Password Change ---- */
+function changePassword(){
+  const o = openOverlay(`<h2 style="font-family:var(--font-display);font-size:26px;margin-bottom:16px">${ICON.lock} Change Password</h2><form class="form-grid" id="pwForm">
+    <label class="field-label">New Password<input name="a" type="password" minlength="10" autocomplete="new-password" required autofocus placeholder="Minimum 10 characters"></label>
+    <label class="field-label">Confirm Password<input name="b" type="password" minlength="10" autocomplete="new-password" required placeholder="Re-enter password"></label>
+    <div class="err-msg" id="pwErr" role="alert"></div>
+    <div style="display:flex;gap:10px;margin-top:6px">
+      <button class="btn-primary-pill" type="submit">${ICON.check} Update Password</button>
+      <button class="btn-action" type="button" id="pwX">${ICON.close} Cancel</button>
+    </div>
+  </form>`);
+  $('#pwX', o).onclick = closeOverlay;
+  $('#pwForm', o).onsubmit = async e => {
+    e.preventDefault(); const a = e.target.a.value, b = e.target.b.value;
+    if(a !== b) return $('#pwErr').textContent = 'Passwords do not match.';
+    const {error} = await sb.auth.updateUser({password: a});
+    if(error) return $('#pwErr').textContent = error.message;
+    closeOverlay(); toast('Password changed successfully');
+  };
+}
+
+/* =====================================================================
+   APP INIT
+   ===================================================================== */
+route();
+</script>
+</body>
+</html>
